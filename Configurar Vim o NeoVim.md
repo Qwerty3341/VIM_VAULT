@@ -12,8 +12,6 @@ source ~/.vimrc
 ```
 # Configuración básica
 ```
-if has("vim") || has("nvim")
-
 " ---- Interfaz ----
 set number              " Muestra números de línea absolutos
 set relativenumber      " Muestra números de línea relativos al cursor
@@ -48,7 +46,4 @@ set autoindent          " Copia la indentación de la línea anterior
 call plug#begin()
 	Plug 'autor/repoDelPluggin'
 call plug#end()
-
-
-endif
 ```
