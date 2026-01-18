@@ -12,38 +12,32 @@ source ~/.vimrc
 ```
 # Configuración básica
 ```
-" ---- Interfaz ----
-set number              " Muestra números de línea absolutos
-set relativenumber      " Muestra números de línea relativos al cursor
-set numberwidth=1       " Ancho mínimo de la columna de números
-set mouse=a             " Habilita el uso del mouse
-set showcmd             " Muestra comandos incompletos
-set ruler               " Muestra la posición del cursor
-set laststatus=2        " Muestra siempre la barra de estado
-set nowrap              " Evita que las líneas largas se partan visualmente
-set cursorline          " Resalta la línea donde está el cursor
-highlight CursorLine cterm=NONE ctermbg=236 guibg=#303030 " Color del fondo de la línea actual en terminal
-set background=dark
-
-" ---- Portapapeles ----
-set clipboard=unnamedplus " Usa el portapapeles del sistema
-
-" ---- Codificación y sintaxis ----
-set encoding=utf-8      " Usa UTF-8 como codificación
-syntax enable           " Activa el resaltado de sintaxis
-set showmatch           " Resalta pares coincidentes
-set smartindent         " Agrega indentación extra en estructuras tipo `{ }`, `if`, `for`, etc.
-filetype plugin indent on " Lo mismo que smartindent pero con mayor soporte a lenguajes
-
-" ---- Tabulaciones (TAB reales) ----
-set noexpandtab         " Usa tabuladores reales, no espacios
-set tabstop=4           " Un TAB se muestra como 4 columnas
-set shiftwidth=4        " Indentación con >> y <<
-set softtabstop=0       " Evita simulación de espacios
-set autoindent          " Copia la indentación de la línea anterior 
-
-" ---- Pluggins ----
-call plug#begin()
-	Plug 'autor/repoDelPluggin'
-call plug#end()
+set number
+set relativenumber     
+set numberwidth=1
+set mouse=a
+set showcmd
+set ruler 
+set laststatus=2
+set nowrap
+set cursorline
+set wildmenu
+set wildmode=longest:full,full
+set termguicolors
+set noshowmode
+set clipboard=unnamedplus
+set encoding=utf-8
+syntax enable
+set showmatch
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set softtabstop=0
+set autoindent
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set lazyredraw
+set updatetime=300
 ```
