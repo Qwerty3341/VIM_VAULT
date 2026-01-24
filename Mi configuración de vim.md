@@ -1,7 +1,7 @@
-```
+# .vimrc
+```vim
 set number
-set relativenumber     
-set numberwidth=1
+set relativenumber
 set mouse=a
 set showcmd
 set ruler 
@@ -16,7 +16,7 @@ set termguicolors
 set noshowmode
 
 set clipboard=unnamedplus
-set encoding=utf-8
+set encoding=UTF-8
 syntax enable
 set showmatch
 
@@ -31,6 +31,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" set cmdheight=2
 set lazyredraw
 set updatetime=300
 
@@ -41,13 +42,38 @@ let &t_SR = "\e[4 q"   " Replace → subrayado
 let mapleader=" "
 
 """""""""""""""""""""""
-"       Plugins
+" Plugins
 """""""""""""""""""""""
+so ~/.vim/plugins.vim
 
+"""""""""""""""""""""""
+" Configuración de plugins
+"""""""""""""""""""""""
+so ~/.vim/plugin-config.vim
+
+"""""""""""""""""""""""
+" Atajos
+"""""""""""""""""""""""
+so ~/.vim/maps.vim
+
+
+"Temas
+set background=dark
+let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
+" colorscheme sonokai
+" colorscheme embark
+" highlight Normal ctermbg=NONE
+
+```
+
+# ~/.vim/plugins.vim
+
+```vim
 call plug#begin()
-		
+
 	" IDE
-	Plug 'scrooloose/nerdtree'    
+	Plug 'scrooloose/nerdtree'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'jiangmiao/auto-pairs'
@@ -55,6 +81,7 @@ call plug#begin()
 	Plug 'yggdroot/indentline'
 	Plug 'itchyny/lightline.vim'
 	Plug 'bagrat/vim-buffet'
+	Plug 'ryanoasis/vim-devicons'
 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -62,14 +89,24 @@ call plug#begin()
 	Plug 'easymotion/vim-easymotion'
 	Plug 'mhinz/vim-signify'
 	Plug 'tpope/vim-commentary'
+
 	" Temas
     Plug 'morhetz/gruvbox'
-	" Plug 'sainnhe/everforest'
-
+	Plug 'sainnhe/sonokai'
+	Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 call plug#end()
 
+```
 
+# ~/.vim/plugin-config.vim
+```vim
+" ====================
 " Configuración de coc
+" ====================
+set nobackup
+set nowritebackup
+set signcolumn=yes
+
 let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-html',
@@ -95,8 +132,30 @@ inoremap <silent><expr> <S-TAB>
 inoremap <silent><expr> <CR>
       \ coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
+inoremap <silent><expr> <c-space> coc#refresh()
 
+" augroup CocColors
+"   autocmd!
+"   autocmd ColorScheme * call s:coc_colors()
+" augroup END
+
+" function! s:coc_colors() abort
+"   Popup menu
+"   highlight Pmenu guibg=#2d2a2e guifg=#e3e1e4
+"   highlight PmenuSel guibg=#403d40 guifg=#ffffff gui=bold
+"   highlight PmenuSbar guibg=#2d2a2e
+"   highlight PmenuThumb guibg=#5b595c
+
+"   " CoC specific
+"   highlight CocMenuSel guibg=#403d40 guifg=#ffffff gui=bold
+"   highlight CocSearch guifg=#e3e1e4 gui=underline
+"   highlight CocPumDetail guifg=#7f8490
+"   highlight CocPumShortcut guifg=#fc9867
+" endfunction
+
+" ====================
 "Configuración de vim buffet
+" ====================
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
 nmap <leader>3 <Plug>BuffetSwitch(3)
@@ -108,22 +167,43 @@ nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 
 let g:buffet_show_tabline = 1
+let g:buffet_powerline_separators = 1
 let g:buffet_show_only_buffers = 1
 let g:buffet_show_index = 1
+let g:buffet_tab_icon = "\uf00a"
+let g:buffet_left_trunc_icon = "\uf0a8"
+let g:buffet_right_trunc_icon = "\uf0a9"
 autocmd FileType nerdtree setlocal nobuflisted
 
+
+function! g:BuffetSetCustomColors() abort
+  highlight! link BuffetCurrentBuffer StatusLine
+  highlight! link BuffetOtherBuffer StatusLineNC
+endfunction
+
+augroup BuffetColors
+  autocmd!
+  autocmd ColorScheme * call g:BuffetSetCustomColors()
+augroup END
+
+
+" ====================
+"Configuracion de nerdtree
+" ====================
+" let g:NERDTreeWinSize = 30
+
+" ====================
+"Configuracion de lightline
+" ====================
 let g:lightline = {
+      \ 'colorscheme': 'one',
       \ 'enable': { 'tabline': 0 }
       \ }
 
-function! g:BuffetSetCustomColors()
-  hi! BuffetCurrentBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#00FF00 guifg=#000000
-endfunction
+```
 
-"Configuracion de nerdtree
-let g:NERDTreeWinSize = 30
-
-" Atajos
+# Maps
+```vim
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 
@@ -138,9 +218,9 @@ nnoremap <Leader>nt :NERDTreeToggle<CR>
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
 
-"Temas
-set background=dark
-let g:gruvbox_contrast_dark = "hard"
-colorscheme gruvbox
-highlight Normal ctermbg=NONE
+nnoremap <Leader>l :vertical resize +10<CR>
+nnoremap <Leader>h :vertical resize -10<CR>
+nnoremap <Leader>k :resize +5<CR>
+nnoremap <Leader>j :resize -5<CR>
+
 ```
