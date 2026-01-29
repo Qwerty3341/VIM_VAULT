@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mi configuración de vim.md",
+                "file": "Vim como IDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mi configuración de vim"
+              "title": "Vim como IDE"
             }
           }
         ],
@@ -200,14 +200,16 @@
   },
   "active": "1e42db32dc30601c",
   "lastOpenFiles": [
-    "Modo Visual.md",
-    "Modo Insertar.md",
     "Gvim.md",
     "Configurar Vim o NeoVim.md",
+    "neovim/Configurar.md",
+    "Vim como IDE.md",
+    "neovim",
+    "Modo Visual.md",
+    "Modo Insertar.md",
     "Comandos.md",
     "Atajos.md",
     "Buffer.md",
-    "Mi configuración de vim.md",
     "Plugins.md",
     "Modo Normal.md"
   ]
