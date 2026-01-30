@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vim como IDE.md",
+                "file": "Vim como \"IDE\".md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vim como IDE"
+              "title": "Vim como \"IDE\""
             }
           }
         ],
@@ -203,7 +203,7 @@
     "Configurar Vim o NeoVim.md",
     "Comandos.md",
     "neovim/Configurar.md",
-    "Vim como IDE.md",
+    "Vim como \"IDE\".md",
     "Gvim.md",
     "neovim",
     "Modo Visual.md",

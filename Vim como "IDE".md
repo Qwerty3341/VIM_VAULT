@@ -149,6 +149,7 @@ nnoremap <Leader>e :CocCommand explorer<CR>
 
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
 
 " AirLine
 let g:airline#extensions#tabline#enabled = 1
