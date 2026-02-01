@@ -43,10 +43,6 @@ let &t_SR = "\e[4 q"   " Replace → subrayado
 
 let mapleader=" "
 
-augroup autoread_files
-  autocmd!
-  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime
-augroup END
 
 """""""""""""""""""""""
 " Plugins
@@ -70,6 +66,8 @@ set background=dark
 " let g:everforest_enable_italic = 1
 " let g:everforest_better_performance = 1
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+highlight Normal ctermbg=None
 
 ```
 
