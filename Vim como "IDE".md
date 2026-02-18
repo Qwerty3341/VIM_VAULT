@@ -88,14 +88,11 @@ call plug#begin()
 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'voldikss/vim-floaterm'
 
 	Plug 'easymotion/vim-easymotion'
 	Plug 'mhinz/vim-signify'
 	Plug 'tpope/vim-commentary'
-
-	" Temas
-	Plug 'sainnhe/everforest'
-	Plug 'morhetz/gruvbox'
 
 call plug#end()
 ```
@@ -173,6 +170,14 @@ nnoremap <Leader>q :bprevious \| bdelete #<CR>
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
 
+" vim-floaterm
+nnoremap <C-t> :FloatermToggle<CR>
+tnoremap <C-t> <C-\><C-n>:FloatermToggle<CR>
+
+augroup FloatermMappings
+  autocmd!
+  autocmd FileType floaterm tnoremap <buffer> <Esc><Esc> <C-\><C-n>
+augroup END
 ```
 
 # Maps
@@ -186,8 +191,9 @@ nnoremap <Tab> >>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-nnoremap <Leader>l :vertical resize +10<CR>
-nnoremap <Leader>h :vertical resize -10<CR>
-nnoremap <Leader>k :resize +5<CR>
-nnoremap <Leader>j :resize -5<CR>
+nnoremap <C-S-Right> :vertical resize +10<CR>
+nnoremap <C-S-Left>  :vertical resize -10<CR>
+nnoremap <C-S-Up>    :resize +5<CR>
+nnoremap <C-S-Down>  :resize -5<CR>
+
 ```
