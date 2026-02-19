@@ -85,6 +85,7 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'tpope/vim-surround'
 
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -93,6 +94,13 @@ call plug#begin()
 	Plug 'easymotion/vim-easymotion'
 	Plug 'mhinz/vim-signify'
 	Plug 'tpope/vim-commentary'
+
+
+	" Themes
+	Plug 'ayu-theme/ayu-vim' 
+	Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+	Plug 'morhetz/gruvbox'
+
 
 call plug#end()
 ```
@@ -178,6 +186,14 @@ augroup FloatermMappings
   autocmd!
   autocmd FileType floaterm tnoremap <buffer> <Esc><Esc> <C-\><C-n>
 augroup END
+
+" vim sandwich
+vnoremap "  <Esc>`>a"<Esc>`<i"<Esc>
+vnoremap '  <Esc>`>a'<Esc>`<i'<Esc>
+vnoremap (  <Esc>`>a)<Esc>`<i(<Esc>
+vnoremap [  <Esc>`>a]<Esc>`<i[<Esc>
+vnoremap {  <Esc>`>a}<Esc>`<i{<Esc>
+vnoremap `  <Esc>`>a`<Esc>`<i`<Esc>
 ```
 
 # Maps
