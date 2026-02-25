@@ -11,7 +11,7 @@ e = end (Va al final de la palabra siguiente)
 $ = Va al final de una línea
 % = se mueve entre paréntesis
 0 = Se va al comienzo de la línea
-^ =
+^ = Se va al primer caracter de la línea actual
 número + tecla de navegación = se mueve n veces
 ```
 # Nueva línea
