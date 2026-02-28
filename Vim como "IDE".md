@@ -1,6 +1,5 @@
 # .vimrc
 ```vim
-" Configuracion con vimscript
 set number
 set relativenumber
 set mouse=a
@@ -9,6 +8,7 @@ set ruler
 set laststatus=2
 set nowrap
 set cursorline
+set autoread
 
 set wildmenu
 set wildmode=longest:full,full
@@ -18,10 +18,13 @@ set noshowmode
 
 set clipboard=unnamedplus
 set encoding=UTF-8
-syntax enable
+syntax on
 set showmatch
 
 filetype plugin indent on
+set smartindent
+set cindent
+set expandtab
 set completeopt=menu,menuone,noselect
 set tabstop=4
 set shiftwidth=4
@@ -43,7 +46,6 @@ let &t_SR = "\e[4 q"   " Replace → subrayado
 
 let mapleader=" "
 
-
 """""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""
@@ -60,15 +62,25 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 
-"Temas
-set background=dark
-" let g:everforest_background = 'hard'   " soft | medium | hard
-" let g:everforest_enable_italic = 1
-" let g:everforest_better_performance = 1
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
-highlight Normal ctermbg=None
+"""""""""""""""""""""""
+" Temas
+"""""""""""""""""""""""
 
+let ayucolor="dark"
+colorscheme ayu
+
+" set background=dark
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = "hard"
+" let g:terminal_ansi_colors = [       
+"         \ '#282828',  "#cc241d", "#98971a", "#d79921",
+"         \ '#7c6f64',  "#b16286", "#689d6a", "#a89984",
+"         \ '#928374',  "#fb4934", "#b8bb26", "#fabd2f",
+"         \ '#83a598',  "#d3869b", "#8ec07c", "#ebdbb2"
+"         \ ]
+
+" Barra en la seleccion
+highlight Normal cterm=None
 ```
 
 # ~/.vim/plugins.vim
@@ -111,41 +123,61 @@ call plug#end()
 set nobackup
 set nowritebackup
 
+nmap <silent><nowait> gd <Plug>(coc-definition)
+nmap <silent><nowait> gy <Plug>(coc-type-definition)
+nmap <silent><nowait> gi <Plug>(coc-implementation)
+nmap <silent><nowait> gr <Plug>(coc-references)
+
+inoremap <silent><expr> <C-Space>
+      \ coc#pum#visible()
+      \ ? coc#pum#cancel()
+      \ : coc#refresh()
+
+inoremap <silent><expr> <C-@>
+      \ coc#pum#visible()
+      \ ? coc#pum#cancel()
+      \ : coc#refresh()
+
 inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ coc#pum#visible() ? coc#pum#next(1):
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <silent><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+
+inoremap <silent><expr> <C-l>
+      \ coc#float#has_float()
+      \ ? coc#float#close_all()
+      \ : CocAction('showSignatureHelp')
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" augroup CocColors
+"   autocmd!
+"   autocmd ColorScheme * call s:coc_colors()
+" augroup END
 
-augroup CocColors
-  autocmd!
-  autocmd ColorScheme * call s:coc_colors()
-augroup END
+" function! s:coc_colors() abort
+"   " Popup menu
+"   highlight Pmenu guibg=#2d2a2e guifg=#e3e1e4
+"   highlight PmenuSel guibg=#403d40 guifg=#ffffff gui=bold
+"   highlight PmenuSbar guibg=#2d2a2e
+"   highlight PmenuThumb guibg=#5b595c
 
-function! s:coc_colors() abort
-  " Popup menu
-  highlight Pmenu guibg=#2d2a2e guifg=#e3e1e4
-  highlight PmenuSel guibg=#403d40 guifg=#ffffff gui=bold
-  highlight PmenuSbar guibg=#2d2a2e
-  highlight PmenuThumb guibg=#5b595c
-
-  " CoC specific
-  highlight CocMenuSel guibg=#403d40 guifg=#ffffff gui=bold
-  highlight CocSearch guifg=#e3e1e4 gui=underline
-  highlight CocPumDetail guifg=#7f8490
-  highlight CocPumShortcut guifg=#fc9867
-endfunction
+"   " CoC specific
+"   highlight CocMenuSel guibg=#403d40 guifg=#ffffff gui=bold
+"   highlight CocSearch guifg=#e3e1e4 gui=underline
+"   highlight CocPumDetail guifg=#7f8490
+"   highlight CocPumShortcut guifg=#fc9867
+" endfunction
 
 " Coc explorer (extension de coc.nvim)
 nnoremap <Leader>e :CocCommand explorer<CR>
@@ -172,7 +204,6 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 
 nnoremap <Leader>] :bnext<CR>
 nnoremap <Leader>[ :bprevious<CR>
-nnoremap <Leader>q :bprevious \| bdelete #<CR>
 
 " Easymotion
 nmap s <Plug>(easymotion-s2)
@@ -187,13 +218,20 @@ augroup FloatermMappings
   autocmd FileType floaterm tnoremap <buffer> <Esc><Esc> <C-\><C-n>
 augroup END
 
-" vim sandwich
+highlight link Floaterm NormalFloat
+highlight link FloatermBorder FloatBorder
+
+" vim surround
 vnoremap "  <Esc>`>a"<Esc>`<i"<Esc>
 vnoremap '  <Esc>`>a'<Esc>`<i'<Esc>
 vnoremap (  <Esc>`>a)<Esc>`<i(<Esc>
 vnoremap [  <Esc>`>a]<Esc>`<i[<Esc>
 vnoremap {  <Esc>`>a}<Esc>`<i{<Esc>
 vnoremap `  <Esc>`>a`<Esc>`<i`<Esc>
+
+" fzf.vim
+nnoremap <silent> <leader>f :Files<CR>
+
 ```
 
 # Maps

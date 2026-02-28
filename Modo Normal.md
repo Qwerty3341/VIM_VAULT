@@ -1,4 +1,4 @@
-- Ver los comandos del modo normal [[Comandos]]
+- Ver los comandos del modo normal [[Modo comando]]
 - La mayoría de comandos se pueden concatenar con números para que lo haga `n` veces el comando 
 # Navegando por el documento
 ```
