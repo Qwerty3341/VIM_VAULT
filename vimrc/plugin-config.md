@@ -1,123 +1,3 @@
-# .vimrc
-```vim
-set number
-set relativenumber
-set mouse=a
-set showcmd
-set ruler 
-set laststatus=2
-set nowrap
-set cursorline
-set autoread
-
-set wildmenu
-set wildmode=longest:full,full
-
-set termguicolors
-set noshowmode
-
-set clipboard=unnamedplus
-set encoding=UTF-8
-syntax on
-set showmatch
-
-filetype plugin indent on
-set smartindent
-set cindent
-set expandtab
-set completeopt=menu,menuone,noselect
-set tabstop=4
-set shiftwidth=4
-set softtabstop=0
-set autoindent
-
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-
-set lazyredraw
-set updatetime=300
-
-"Configuracion de los modos
-let &t_EI = "\e[2 q"   " Normal → bloque
-let &t_SI = "\e[6 q"   " Insert → barra vertical
-let &t_SR = "\e[4 q"   " Replace → subrayado
-
-let mapleader=" "
-
-"""""""""""""""""""""""
-" Plugins
-"""""""""""""""""""""""
-so ~/.vim/plugins.vim
-
-"""""""""""""""""""""""
-" Configuración de plugins
-"""""""""""""""""""""""
-so ~/.vim/plugin-config.vim
-
-"""""""""""""""""""""""
-" Atajos
-"""""""""""""""""""""""
-so ~/.vim/maps.vim
-
-
-"""""""""""""""""""""""
-" Temas
-"""""""""""""""""""""""
-
-let ayucolor="dark"
-colorscheme ayu
-
-" set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = "hard"
-" let g:terminal_ansi_colors = [       
-"         \ '#282828',  "#cc241d", "#98971a", "#d79921",
-"         \ '#7c6f64',  "#b16286", "#689d6a", "#a89984",
-"         \ '#928374',  "#fb4934", "#b8bb26", "#fabd2f",
-"         \ '#83a598',  "#d3869b", "#8ec07c", "#ebdbb2"
-"         \ ]
-
-" Barra en la seleccion
-highlight Normal cterm=None
-```
-
-# ~/.vim/plugins.vim
-
-```vim
-call plug#begin()
-	" IDE
-	Plug 'scrooloose/nerdtree'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'christoomey/vim-tmux-navigator'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'alvan/vim-closetag'
-	Plug 'yggdroot/indentline'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'tpope/vim-surround'
-
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
-	Plug 'voldikss/vim-floaterm'
-
-	Plug 'easymotion/vim-easymotion'
-	Plug 'mhinz/vim-signify'
-	Plug 'tpope/vim-commentary'
-
-
-	" Themes
-	Plug 'ayu-theme/ayu-vim' 
-	Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
-	Plug 'morhetz/gruvbox'
-
-
-call plug#end()
-```
-
-# ~/.vim/plugin-config.vim
 ```vim
 " Coc.nvim
 set nobackup
@@ -144,10 +24,10 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 
 
-inoremap <silent><expr> <C-l>
-      \ coc#float#has_float()
-      \ ? coc#float#close_all()
-      \ : CocAction('showSignatureHelp')
+" inoremap <silent><expr> <C-l>
+"       \ coc#float#has_float()
+"       \ ? coc#float#close_all()
+"       \ : CocAction('showSignatureHelp')
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
@@ -232,22 +112,6 @@ vnoremap `  <Esc>`>a`<Esc>`<i`<Esc>
 " fzf.vim
 nnoremap <silent> <leader>f :Files<CR>
 
-```
-
-# Maps
-```vim
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-
-inoremap <S-Tab> <C-d>
-nnoremap <S-Tab> <<
-nnoremap <Tab> >>
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
-
-nnoremap <C-S-Right> :vertical resize +10<CR>
-nnoremap <C-S-Left>  :vertical resize -10<CR>
-nnoremap <C-S-Up>    :resize +5<CR>
-nnoremap <C-S-Down>  :resize -5<CR>
-
+" vim polyglot
+set nocompatible
 ```

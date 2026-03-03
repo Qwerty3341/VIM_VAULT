@@ -1,4 +1,4 @@
-- Ver los comandos del modo normal [[Modo comando]]
+- Ver los comandos del modo [[Modo comando]]
 - La mayoría de comandos se pueden concatenar con números para que lo haga `n` veces el comando 
 # Navegando por el documento
 ```
@@ -36,6 +36,7 @@ número + G = va a una línea en específico
 # Cortar
 ```
 x = elimina (corta) un caracter al frente del cursor
+X = lo mismo que x pero por atrás del cursor
 
 d = delate (borrar no existe, solo hay cortar)
 	dw = delete word

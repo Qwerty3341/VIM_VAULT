@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vim como \"IDE\".md",
+                "file": "neovim/Configurar.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vim como \"IDE\""
+              "title": "Configurar"
             }
           }
         ],
@@ -200,17 +200,24 @@
   },
   "active": "1e42db32dc30601c",
   "lastOpenFiles": [
-    "Modo comando.md",
+    "vimrc/Vim como \"IDE\".md",
+    "vimrc/vimrc.md",
+    "README.md",
+    "Atajos.md",
+    "Modo Visual.md",
     "Modo Normal.md",
+    "Modo comando.md",
     "Modo Insertar.md",
     "Gvim.md",
     "Configurar Vim o NeoVim.md",
-    "Atajos.md",
-    "Vim como \"IDE\".md",
-    "neovim/Configurar.md",
-    "neovim",
-    "Modo Visual.md",
     "Buffer.md",
-    "Plugins.md"
+    "vimrc/maps.md",
+    "vimrc/plugins.md",
+    "ma.md",
+    "vimrc/plugin-config.md",
+    "Plugins.md",
+    "vimrc",
+    "neovim/Configurar.md",
+    "neovim"
   ]
 }
