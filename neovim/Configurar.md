@@ -15,4 +15,4 @@ La estructura va a así para la configuración
 │       ├── lsp.config.lua
 │       └── themes.lua
 ```
-Se puede usar un "autoconfigurador" como LazyVim que ya configura bastantes cosas manualmente
+Se puede usar una distribución como LazyVim que ya configura bastantes cosas manualmente

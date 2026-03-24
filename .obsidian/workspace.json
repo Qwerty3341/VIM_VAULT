@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "neovim/Configurar.md",
+                "file": "vimrc/plugin-config.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configurar"
+              "title": "plugin-config"
             }
           }
         ],
@@ -200,8 +200,14 @@
   },
   "active": "1e42db32dc30601c",
   "lastOpenFiles": [
-    "vimrc/Vim como \"IDE\".md",
+    "vimrc/maps.md",
+    "vimrc/plugins.md",
     "vimrc/vimrc.md",
+    "vimrc/Vim como \"IDE\".md",
+    "neovim/Cambiando config de LazyVim.md",
+    "neovim/Desinstalar LazyVim.md",
+    "netrw.md",
+    "neovim/Configurar.md",
     "README.md",
     "Atajos.md",
     "Modo Visual.md",
@@ -211,13 +217,10 @@
     "Gvim.md",
     "Configurar Vim o NeoVim.md",
     "Buffer.md",
-    "vimrc/maps.md",
-    "vimrc/plugins.md",
     "ma.md",
     "vimrc/plugin-config.md",
     "Plugins.md",
     "vimrc",
-    "neovim/Configurar.md",
     "neovim"
   ]
 }

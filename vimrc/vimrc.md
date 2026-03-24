@@ -1,4 +1,5 @@
 ```vim
+set nocompatible
 set number
 set relativenumber
 set mouse=a
@@ -38,7 +39,7 @@ set smartcase
 set lazyredraw
 set updatetime=300
 
-"Configuracion de los modos
+"Configuracion del cursor en los modos
 let &t_EI = "\e[2 q"   " Normal → bloque
 let &t_SI = "\e[6 q"   " Insert → barra vertical
 let &t_SR = "\e[4 q"   " Replace → subrayado
@@ -51,33 +52,23 @@ let mapleader=" "
 so ~/.vim/plugins.vim
 
 """""""""""""""""""""""
-" Configuración de plugins
+" Plugin config
 """""""""""""""""""""""
 so ~/.vim/plugin-config.vim
 
 """""""""""""""""""""""
-" Atajos
+" Maps
 """""""""""""""""""""""
 so ~/.vim/maps.vim
 
-
 """""""""""""""""""""""
-" Temas
+" Theme
 """""""""""""""""""""""
+set background=dark
+colorscheme retrobox
 
-let ayucolor="dark"
-colorscheme ayu
-
-" set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = "hard"
-" let g:terminal_ansi_colors = [       
-"         \ '#282828',  "#cc241d", "#98971a", "#d79921",
-"         \ '#7c6f64',  "#b16286", "#689d6a", "#a89984",
-"         \ '#928374',  "#fb4934", "#b8bb26", "#fabd2f",
-"         \ '#83a598',  "#d3869b", "#8ec07c", "#ebdbb2"
-"         \ ]
-
-" Barra en la seleccion
 highlight Normal cterm=None
+highlight CursorLine ctermbg=236
+highlight! link CocInlayHint Comment
+
 ```
