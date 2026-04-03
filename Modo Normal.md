@@ -69,7 +69,8 @@ R = va a dejarnos en modo reemplazar
 c = change 
 	cw = Cambia una palabra (desde donde está el cursor)
 	ciw = Cambia la palabra (dentro de cosas dentro de comillas o llaves) 
-
+C
+	Cambia una linea completa desde donde está el cursor en adelante
 ```
 
 

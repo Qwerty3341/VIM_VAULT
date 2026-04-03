@@ -10,13 +10,13 @@ nnoremap <Tab> >>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Surround
-xnoremap s" c"<C-r>""<Esc>
-xnoremap s' c'<C-r>"'<Esc>
-xnoremap s( c(<C-r>")<Esc>
-xnoremap s[ c[<C-r>"]<Esc>
-xnoremap s{ c{<C-r>"}<Esc>
-xnoremap s` c`<C-r>"`<Esc>
+" Surround (si no se quiere usar el vim surround)
+" xnoremap s" c"<C-r>""<Esc>
+" xnoremap s' c'<C-r>"'<Esc>
+" xnoremap s( c(<C-r>")<Esc>
+" xnoremap s[ c[<C-r>"]<Esc>
+" xnoremap s{ c{<C-r>"}<Esc>
+" xnoremap s` c`<C-r>"`<Esc>
 
 " Ajustar tamanio de paneles
 nnoremap <C-S-Right> :vertical resize +10<CR>

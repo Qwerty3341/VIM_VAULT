@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vimrc/plugin-config.md",
+                "file": "Modo comando.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "plugin-config"
+              "title": "Modo comando"
             }
           }
         ],
@@ -200,25 +200,25 @@
   },
   "active": "1e42db32dc30601c",
   "lastOpenFiles": [
-    "vimrc/maps.md",
+    "Gvim.md",
+    "vimrc/plugin-config.md",
     "vimrc/plugins.md",
     "vimrc/vimrc.md",
     "vimrc/Vim como \"IDE\".md",
-    "neovim/Cambiando config de LazyVim.md",
-    "neovim/Desinstalar LazyVim.md",
-    "netrw.md",
+    "vimrc/maps.md",
+    "Modo Normal.md",
     "neovim/Configurar.md",
+    "neovim/Desinstalar LazyVim.md",
+    "neovim/Cambiando config de LazyVim.md",
+    "Modo comando.md",
+    "Modo Visual.md",
+    "Buffer.md",
+    "netrw.md",
     "README.md",
     "Atajos.md",
-    "Modo Visual.md",
-    "Modo Normal.md",
-    "Modo comando.md",
     "Modo Insertar.md",
-    "Gvim.md",
     "Configurar Vim o NeoVim.md",
-    "Buffer.md",
     "ma.md",
-    "vimrc/plugin-config.md",
     "Plugins.md",
     "vimrc",
     "neovim"

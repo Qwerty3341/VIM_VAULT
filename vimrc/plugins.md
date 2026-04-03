@@ -18,6 +18,7 @@ call plug#begin()
 	Plug 'mhinz/vim-signify'
 	Plug 'tpope/vim-commentary'
     Plug 'sheerun/vim-polyglot'
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 	" Themes
 	Plug 'ayu-theme/ayu-vim' 

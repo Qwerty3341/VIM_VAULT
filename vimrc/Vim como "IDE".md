@@ -1,3 +1,4 @@
+## Última modificación 03/04/2026
 La mejor configuración para vim clásico (estilo vs-code).
 
 [[vimrc]]

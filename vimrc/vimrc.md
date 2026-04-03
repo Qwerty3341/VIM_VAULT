@@ -65,7 +65,7 @@ so ~/.vim/maps.vim
 " Theme
 """""""""""""""""""""""
 set background=dark
-colorscheme retrobox
+colorscheme ayu
 
 highlight Normal cterm=None
 highlight CursorLine ctermbg=236
