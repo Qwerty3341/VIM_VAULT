@@ -72,6 +72,3 @@ c = change
 C
 	Cambia una linea completa desde donde está el cursor en adelante
 ```
-
-
-

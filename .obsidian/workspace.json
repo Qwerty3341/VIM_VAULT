@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "adb7719e0163a3e8",
+            "id": "1e42db32dc30601c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Modo Normal.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "1e42db32dc30601c",
+            "id": "d7b099684d18c559",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modo comando.md",
+                "file": "Indentar.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modo comando"
+              "title": "Indentar"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 269.5
   },
   "right": {
     "id": "4ffe61462716a762",
@@ -198,26 +198,36 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "1e42db32dc30601c",
+  "active": "d7b099684d18c559",
   "lastOpenFiles": [
-    "Gvim.md",
-    "vimrc/plugin-config.md",
-    "vimrc/plugins.md",
-    "vimrc/vimrc.md",
-    "vimrc/Vim como \"IDE\".md",
-    "vimrc/maps.md",
     "Modo Normal.md",
-    "neovim/Configurar.md",
-    "neovim/Desinstalar LazyVim.md",
-    "neovim/Cambiando config de LazyVim.md",
-    "Modo comando.md",
+    "Indentar.md",
     "Modo Visual.md",
+    "neovim/Desinstalar LazyVim.md",
+    "neovim/Configurar.md",
+    "neovim/Cambiando config de LazyVim.md",
+    "neovim/nvim/lua/plugins/themes.lua.md",
+    "neovim/nvim/lua/config/lazy.md",
+    "neovim/nvim/lua/config/autocmds.md",
+    "neovim/nvim/lua/config/options.md",
+    "neovim/nvim/lua/config/keymaps.md",
+    "neovim/nvim/lua/plugins",
+    "neovim/nvim/lua/config",
+    "neovim/nvim/lua",
+    "neovim/nvim",
+    "vimrc/maps.md",
+    "Modo Insertar.md",
+    "Gvim.md",
+    "Configurar Vim o NeoVim.md",
     "Buffer.md",
+    "Atajos.md",
+    "vimrc/Vim como \"IDE\".md",
+    "vimrc/plugins.md",
+    "vimrc/plugin-config.md",
+    "vimrc/vimrc.md",
+    "Modo comando.md",
     "netrw.md",
     "README.md",
-    "Atajos.md",
-    "Modo Insertar.md",
-    "Configurar Vim o NeoVim.md",
     "ma.md",
     "Plugins.md",
     "vimrc",
