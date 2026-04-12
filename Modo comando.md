@@ -40,9 +40,3 @@ Con `:s` y los comandos de búsqueda
 :set noexpandtab
 :retab!
 ```
-# Comandos de utilería 
-Estos comandos pueden incrementar y decrementar un numero desde el modo normal 
-```
-Ctrl x
-Ctrl a
-```

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Indentar.md",
+                "file": "Modo Normal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indentar"
+              "title": "Modo Normal"
             }
           }
         ],
@@ -200,9 +200,11 @@
   },
   "active": "d7b099684d18c559",
   "lastOpenFiles": [
+    "Modo comando.md",
+    "Modo Insertar.md",
     "Modo Normal.md",
-    "Indentar.md",
     "Modo Visual.md",
+    "Indentar.md",
     "neovim/Desinstalar LazyVim.md",
     "neovim/Configurar.md",
     "neovim/Cambiando config de LazyVim.md",
@@ -216,7 +218,6 @@
     "neovim/nvim/lua",
     "neovim/nvim",
     "vimrc/maps.md",
-    "Modo Insertar.md",
     "Gvim.md",
     "Configurar Vim o NeoVim.md",
     "Buffer.md",
@@ -225,7 +226,6 @@
     "vimrc/plugins.md",
     "vimrc/plugin-config.md",
     "vimrc/vimrc.md",
-    "Modo comando.md",
     "netrw.md",
     "README.md",
     "ma.md",

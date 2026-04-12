@@ -72,3 +72,9 @@ c = change
 C
 	Cambia una linea completa desde donde está el cursor en adelante
 ```
+# Incrementar números  
+Estos comandos pueden incrementar y decrementar un numero desde el modo normal 
+```
+Ctrl x
+Ctrl a
+```
