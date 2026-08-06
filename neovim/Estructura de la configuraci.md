@@ -11,8 +11,15 @@ La estructura va a así para la configuración
 │   │   ├── lazy.lua
 │   │   └── options.lua
 │   └── plugins
-│       ├── example.lua
-│       ├── lsp.config.lua
-│       └── themes.lua
 ```
+O
+```vim 
+~/.config/nvim/
+├── init.lua
+└── lua/
+    ├── options.lua
+    ├── keymaps.lua
+    └── plugins.lua
+```
+
 Se puede usar una distribución como LazyVim que ya configura bastantes cosas manualmente

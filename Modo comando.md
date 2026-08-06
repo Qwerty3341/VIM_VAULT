@@ -22,18 +22,20 @@ Con `:s` y los comandos de búsqueda
 ```
 :s/ocurrencia/nuevaPalabra
 	Cambia una ocurrencia por una palabra a partir de donde se encuentra el 
-	cursor
+	cursor hasta el final de la linea actual
 	
 :s/ocurrencia/nuevaPalabra/g
-	Cambia todas las ocurrencias de una linea por una palabra a partir de donde  
-	se encuentra el cursor
+	Lo mismo que el de arriba pero con todas las ocurrencias
 	
 :%s/ocurrencia/nuevaPalabra/g
-	Cambia todas las ocurrencias del archivo (a partir de donde está el cursor)
+	Cambia todas las ocurrencias del archivo 
 	
 :%s/ocurrencia/nuevaPalabra/gc
 	Lo mismo que el comando de arriba pero va a preguntar uno a uno si se quiere 
 	cambiar la ocurrencia
+	
+:.$s/ocurrencia/nuevaPalabra/gc
+	Este es en todo el archivo pero a partir de donde está el cursor 
 ```
 # Cambiar espacios por tabs
 ```

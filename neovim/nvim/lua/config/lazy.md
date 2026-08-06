@@ -1,0 +1,1 @@
+Inicialización de lazy.nvim (el gestor de plugins)

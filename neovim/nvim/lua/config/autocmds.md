@@ -1,0 +1,1 @@
+Comandos automáticos que se activan con eventos.

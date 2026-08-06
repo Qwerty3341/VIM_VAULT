@@ -78,3 +78,8 @@ Estos comandos pueden incrementar y decrementar un numero desde el modo normal
 Ctrl x
 Ctrl a
 ```
+# Borrar e Insertar
+```
+S
+	Borra el contenido de la linea actual y entra en modo insertar
+```
